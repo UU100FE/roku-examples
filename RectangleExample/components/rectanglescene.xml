@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="RectangleExample" extends="Scene">
+
+<!-- BrightScript Portion -->
+<script type="text/brightscript" >
+<![CDATA[
+  '**
+  '** Example: Edit a Label size and color with BrightScript
+	'** 为组件显示屏幕设置背景图像
+	'** 将示例居中在显示屏幕中
+	'** 将远程控制焦点设置在组件中的节点或组件上
+  '**
+
+  function init()
+		m.top.backgroundURI = "pkg:/images/rsgde_bg_hd.jpg" '设置
+
+		example = m.top.findNode("exampleRectangle")
+		examplerect = example.boundingRect()
+		centerx = (1280 - examplerect.width) / 2
+    centery = (720 - examplerect.height) / 2
+    example.translation = [ centerx, centery ]
+
+    m.top.setFocus(true)
+
+  end function
+]]>
+</script>
+<children>
+	<Rectangle
+		id = "exampleRectangle"
+		width = "512"
+		height = "288"
+		color = "0x1010EBFF" />
+
+</children>
+<!-- End of BrightScript Portion -->
+</component>
