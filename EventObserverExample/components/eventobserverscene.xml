@@ -32,7 +32,7 @@
     end sub
 
     sub changetext()
-      if (m.textchange = false) then 
+      if (m.textchange = false) then
         m.movinglabel.text = m.alternatetext
         m.textchange = true
       else
@@ -47,38 +47,38 @@
 
   <children>
 
-    <Rectangle 
+    <Rectangle
       id = "textRectangle"
-      width = "640" 
-      height = "60" 
+      width = "640"
+      height = "60"
       color = "0x10101000" >
 
-      <Label 
-        id = "movingLabel" 
-        width = "280" 
-        height = "60" 
-        text = "All The Best Videos!" 
-        horizAlign = "center" 
+      <Label
+        id = "movingLabel"
+        width = "280"
+        height = "60"
+        text = "All The Best Videos!"
+        horizAlign = "center"
         vertAlign = "center" />
 
     </Rectangle>
 
-    <Animation 
-      id = "scrollbackAnimation" 
-      duration = "10" 
-      repeat = "true" 
+    <Animation
+      id = "scrollbackAnimation"
+      duration = "10"
+      repeat = "true"
       easeFunction = "linear" >
 
-      <Vector2DFieldInterpolator 
-        key = "[ 0.0, 0.5, 1.0 ]" 
-        keyValue = "[ [0.0, 0.0], [360.0, 0.0], [0.0, 0.0] ]" 
+      <Vector2DFieldInterpolator
+        key = "[ 0.0, 0.5, 1.0 ]"
+        keyValue = "[ [0.0, 0.0], [360.0, 0.0], [0.0, 0.0] ]"
         fieldToInterp = "movingLabel.translation" />
 
     </Animation>
 
-    <Timer 
-      id = "textTimer" 
-      repeat = "true" 
+    <Timer
+      id = "textTimer"
+      repeat = "true"
       duration = "5" />
 
   </children>
